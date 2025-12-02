@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parkir Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Parkir Calculator</h1>
+    <p class="lead">Masukkan waktu masuk & keluar, pilih kendaraan, lalu klik Hitung.</p>
+
+    <div class="card">
+
+      <form id="calcForm">
+
+        <div>
+          <label for="vehicle">Jenis Kendaraan</label>
+          <select id="vehicle">
+            <option value="motor">Motor – Rp 2.000 / jam</option>
+            <option value="car">Mobil – Rp 5.000 / jam</option>
+            <option value="truck">Truk – Rp 15.000 / jam</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="rounding">Metode Perhitungan</label>
+          <select id="rounding">
+            <option value="per_minute">Per menit (akurasi)</option>
+            <option value="ceil_15">Pembulatan 15 menit</option>
+            <option value="ceil_hour">Pembulatan jam</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <label for="entry">Waktu Masuk</label>
+          <input type="datetime-local" id="entry" required />
+        </div>
+
+        <div class="full">
+          <label for="exit">Waktu Keluar</label>
+          <input type="datetime-local" id="exit" required />
+        </div>
+
+        <div class="full buttons">
+          <button type="submit" class="primary">Hitung</button>
+          <button type="button" id="resetBtn" class="secondary">Reset</button>
+        </div>
+
+      </form>
+
+      <div class="result" id="result" style="display:none;">
+        <div class="row"><strong>Hasil Perhitungan</strong></div>
+        <div class="row small" id="summary"></div>
+        <pre id="breakdown"></pre>
+      </div>
+
+    </div>
+
+    <p class="small note">
+      Catatan: Tarif bisa disesuaikan sesuai kebutuhan Anda.
+    </p>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

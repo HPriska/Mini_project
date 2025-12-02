@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Converter - Uang & Berat</title>
+
+  <!-- Link ke CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="top-buttons">
+    <a class="toggle" href="../index.html">Home</a>
+    <button id="toggleDark" class="toggle">Dark Mode</button>
+  </div>
+
+  <div class="app" id="app">
+    <div class="mode-buttons" style="display:flex; gap:8px; margin-bottom:10px;">
+      <button class="toggle" onclick="showMode('money')">Money</button>
+      <button class="toggle" onclick="showMode('weight')">Weight</button>
+      <button class="toggle" onclick="showMode('height')">Height</button>
+    </div>
+
+    <div class="topbar">
+      <div>
+        <h1>Converter</h1>
+        <p class="lead">Ubah nilai mata uang atau konversi berat atau tinggi.</p>
+      </div>
+    </div>
+
+    <div class="row" id="converterRow">
+
+      <!-- Currency Converter -->
+      <div class="card">
+        <label>Jumlah</label>
+        <input id="moneyAmount" type="number" value="1" min="0" step="any">
+
+        <label style="margin-top:10px">Dari</label>
+        <select id="moneyFrom"></select>
+
+        <label style="margin-top:10px">Ke</label>
+        <select id="moneyTo"></select>
+
+        <div class="actions">
+          <button class="primary" id="convertMoney">Convert</button>
+          <button id="swapMoney">Swap</button>
+        </div>
+
+        <div class="result" id="moneyResult">—</div>
+
+        <div class="rates small">
+          <p class="small">Kurs relatif terhadap <strong>USD</strong> (opsional):</p>
+          <input id="rateUSD" placeholder="USD → 1" readonly>
+          <input id="rateIDR" placeholder="IDR → 15000">
+        </div>
+      </div>
+
+      <!-- Weight Converter -->
+      <div class="card">
+        <label>Nilai Berat</label>
+        <input id="weightAmount" type="number" value="1" min="0" step="any">
+
+        <label style="margin-top:10px">Dari</label>
+        <select id="weightFrom">
+          <option value="kg">Kilogram (kg)</option>
+          <option value="g">Gram (g)</option>
+          <option value="lb">Pound (lb)</option>
+          <option value="oz">Ounce (oz)</option>
+        </select>
+
+        <label style="margin-top:10px">Ke</label>
+        <select id="weightTo">
+          <option value="kg">Kilogram (kg)</option>
+          <option value="g">Gram (g)</option>
+          <option value="lb">Pound (lb)</option>
+          <option value="oz">Ounce (oz)</option>
+        </select>
+
+        <div class="actions">
+          <button class="primary" id="convertWeight">Convert</button>
+          <button id="swapWeight">Swap</button>
+        </div>
+
+        <div class="result" id="weightResult">—</div>
+      </div>
+
+      <!-- Height Converter -->
+      <div class="card">
+        <label>Nilai Tinggi</label>
+        <input id="heightAmount" type="number" value="1" min="0" step="any">
+
+        <label style="margin-top:10px">Dari</label>
+        <select id="heightFrom">
+          <option value="cm">Centimeter (cm)</option>
+          <option value="m">Meter (m)</option>
+          <option value="inch">Inch (in)</option>
+          <option value="ft">Feet (ft)</option>
+        </select>
+
+        <label style="margin-top:10px">Ke</label>
+        <select id="heightTo">
+          <option value="cm">Centimeter (cm)</option>
+          <option value="m">Meter (m)</option>
+          <option value="inch">Inch (in)</option>
+          <option value="ft">Feet (ft)</option>
+        </select>
+
+        <div class="actions">
+          <button class="primary" id="convertHeight">Convert</button>
+          <button id="swapHeight">Swap</button>
+        </div>
+
+        <div class="result" id="heightResult">—</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Link ke JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>

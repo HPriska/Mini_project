@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Project</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      color: #f1f5f9;
+    }
+
+    .btn-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 150px);
+      gap: 15px;
+      justify-content: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 15px;
+      margin-right: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #1e293b;
+      color: #e2e8f0;
+      font-size: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #334155;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      .btn-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Pilih Project</h1>
+
+    <div class="btn-grid">      
+      <a href="to-do-list/index.html" class="btn">To Do List</a>
+      <a href="calculator/index.html" class="btn">Calculator</a>
+      <a href="bmi/index.html" class="btn">BMI</a>
+      <a href="convert-money-weight-tall/index.html" class="btn">Converter</a>
+      <a href="hitung_parkir/index.html" class="btn">Hitung Parkir</a>
+      <a href="quiz/index.html" class="btn">Quiz</a>
+      <a href="Pomodoro-Timer/index.html" class="btn">Pomodoro Timer</a>
+      <a href="Memory-Card-Game/index.html" class="btn">Memory Card Game</a>
+    </div>
+  </div>
+</body>
+</html>

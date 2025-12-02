@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BMI Calculator</title>
+
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="top-buttons">
+    <a class="toggle" href="../index.html">Home</a>
+    <button id="toggleDark" class="toggle">Dark Mode</button>
+  </div>
+
+  <div class="card">
+    <h1>BMI Calculator</h1>
+    <p class="lead">Hitung Body Mass Index (BMI) dan lihat kategorinya.</p>
+
+    <div class="grid">
+      <!-- Kolom 1 -->
+      <div>
+        <label>Berat</label>
+        <div style="display:flex;gap:8px">
+          <input id="weight" type="number" placeholder="Contoh: 60" />
+          <select id="weightUnit" style="width:120px">
+            <option value="kg">kg</option>
+            <option value="lb">lb</option>
+          </select>
+        </div>
+
+        <label style="margin-top:12px">Tinggi</label>
+        <div style="display:flex;gap:8px">
+          <input id="height" type="number" placeholder="Height" />
+          <select id="heightUnit" style="width:120px">
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+            <option value="inch">in</option>
+            <option value="ft">ft</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button class="primary" id="calc">Hitung BMI</button>
+          <button id="reset">Reset</button>
+        </div>
+
+        <div style="margin-top:10px;display:flex;gap:8px">
+          <button id="save" style="flex:1">Simpan ke riwayat</button>
+          <button id="clearHistory">Bersihkan riwayat</button>
+        </div>
+      </div>
+
+      <!-- Kolom 2 -->
+      <div>
+        <div class="result" id="resultBox">
+          <div class="bmi-val" id="bmiValue">—</div>
+          <div class="bmi-cat" id="bmiCategory">
+            Masukkan berat dan tinggi lalu tekan "Hitung BMI"
+          </div>
+        </div>
+
+        <div class="history">
+          <label>Riwayat</label>
+          <div id="historyList" style="margin-top:8px"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Rumus: BMI = berat(kg) / (tinggi(m))². Satuan lain akan dikonversi otomatis.
+    </footer>
+  </div>
+
+  <!-- LINK JS -->
+  <script src="script.js"></script>
+</body>
+</html>
