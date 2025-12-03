@@ -1,5 +1,5 @@
-let workTime = 60 * 60;
-let breakTime = 10 * 60;
+let workTime = 25 * 60;
+let breakTime = 5 * 60;
 let timeLeft = workTime;
 let isRunning = false;
 let interval;

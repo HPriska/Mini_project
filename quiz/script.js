@@ -7,7 +7,7 @@ const questions = [
   {
     question: "Atribut apa yang wajib ada di tag <a> untuk membuat link?",
     answers: ["src", "href", "link", "path"],
-    correct: 3
+    correct: 1
   },
   {
     question: "Tag HTML mana yang bersifat semantic?",
